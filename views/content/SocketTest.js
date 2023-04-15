@@ -9,6 +9,7 @@ const  SocketTest = () => {
   const [inputText, setInputText] = useState('');
 
   useEffect(() => {
+    if (socket != null) return () => {}; 
     const url = 'ws://192.168.1.114:3000' 
     const newSocket = SocketIOClient(url);
     console.log('Connecting to WebSocket server ' + url)
