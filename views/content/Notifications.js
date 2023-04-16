@@ -4,6 +4,8 @@ import { getUsers } from '../registration/utils';
 import WifiNotEnabled from './WifiNotEnabled';
 import * as Network from 'expo-network';
 import SocketTest from './SocketTest';
+import ControleView from './ControleView';
+
 
 const showUser = (user, index) => {
   return (
@@ -44,7 +46,7 @@ const Notifications = () => {
     return <WifiNotEnabled />;
   }
   return (
-    <SocketTest/>
+    <ControleView/>
     // <SafeAreaView>
     //   <View
     //     style={{
